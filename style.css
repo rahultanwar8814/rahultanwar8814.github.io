@@ -168,6 +168,12 @@ p {
 	text-decoration: underline;
  	/* Add underline */
 }
+.custom-link-color-black {
+	color: black;
+	/* Change the color to your preferred color */
+	/* text-decoration: underline; */
+ 	/* Add underline */
+}
 
 #header .hamburger {
 	height: 60px;
