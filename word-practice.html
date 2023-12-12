@@ -97,9 +97,55 @@
 
     const setWordList = () => {
       const wordListInput = document.getElementById('word-list-input').value;
-      wordList = wordListInput.split('\n').map(word => word.trim().replace(/^\d+\.\s*/, '')).filter(word => word !== '');
+      if (wordListInput.trim() === '') {
+        wordList = [
+          "cloud", "abroad", "access", "achieve", "achievement", "acknowledgment", "additional", "adjust", "admiring", "alone", "animal",
+          "around", "art", "attach", "attain", "balance", "bark", "basket", "beach", "beat", "beautiful", "because", "bed",
+          "before", "belated", "believe", "belong", "below", "benefit", "best", "better", "billion", "blood", "bore", "bottle",
+          "branches", "breed", "brother", "bucket", "building", "built", "capital", "captain", "captivate", "capture", "cardiac",
+          "careless", "carnival", "carry", "cash", "casual", "catch", "categorize", "ceremony", "certain", "challenge", "chief",
+          "children", "church", "circle", "clap", "coat", "column", "communicate", "complete", "concentrate", "conclude", "concrete",
+          "confuse", "congested", "congratulate", "cordial", "country", "cover", "craft", "cravings", "create", "crop", "crowd",
+          "crush", "cry", "dance", "death", "decide", "defeat", "detail", "determined", "different", "disappear", "divide", "draw",
+          "dream", "dry", "east", "eat", "effect", "encounter", "energy", "entertainment", "evening", "except", "expect", "experience",
+          "fabulous", "face", "fake", "family", "fan", "fantastic", "far", "farm", "farmers", "fast", "fever", "figure", "film",
+          "finish", "fish", "flowers", "fly", "force", "formal", "forward", "freedom", "frequent", "fresh", "friendly", "friends",
+          "fruits", "funny", "gain", "gas", "genuine", "glory", "government", "great", "greet", "ground", "group", "growth", "guess",
+          "guest", "hang", "harsh", "head", "health", "hurry", "idea", "ignore", "illuminate", "import", "important", "impossible",
+          "incident", "industry", "infrastructure", "inside", "insight", "instant", "interest", "interior", "interval", "intimidating",
+          "island", "kick", "kid", "kitchen", "land", "language", "large", "laugh", "launch", "leader", "lean", "leave", "leaves",
+          "led", "level", "listen", "little", "locate", "loss", "loud", "luck", "machine", "magnificent", "march", "marine", "marry",
+          "master", "match", "materials", "matter", "measure", "medicine", "meet", "mine", "money", "morning", "north", "official",
+          "often", "oxygen", "paint", "pair", "pamper", "paragraph", "park", "peace", "pen", "penetrate", "people", "perhaps",
+          "permit", "person", "phrase", "pillow", "place", "plant", "plural", "poem", "polite", "pollute", "possible", "power",
+          "prefix", "present", "probably", "problem", "produce", "profit", "protection", "punch", "rack", "raft", "rain", "range",
+          "ray", "reach", "realise", "reflection", "regain", "random", "rhythm", "river", "rose", "rule", "safe", "sail", "sand",
+          "saw", "scare", "scientist", "sea", "seat", "secure", "security", "sentence", "settle", "shade", "shadow", "shape", "share",
+          "sharp", "shine", "ship", "sight", "silent", "similar", "sit", "sky", "small", "smile", "smooth", "soap", "soil", "south",
+          "space", "special", "speed", "sports", "spot", "stars", "steal", "steel", "story", "street", "strong", "sudden", "suffix",
+          "sunlight", "super", "supply", "sure", "surrender", "swim", "table", "tackle", "talent", "talk", "teach", "teenage",
+          "television", "tell", "tender", "thick", "together", "tomorrow", "track", "transport", "treat", "usually", "various",
+          "vegetables", "vehicle", "victory", "voice", "walk", "wander", "wanted", "warm", "watch", "waves", "way", "west", "wet",
+          "wheels", "whoever", "wings", "winner", "wonder", "worst", "yawn", "yesterday", "resignation", "employee", "message",
+          "attendance", "design", "psychology", "psychiatrist", "properties", "property", "binary", "multiplication", "understand",
+          "loading", "credential", "dictionary", "experience", "example", "quality", "qualities", "necessary", "territory", "foundation",
+          "punishable", "causing", "dangerous", "obstruction", "horizontal", "vertical", "regularization", "except", "accept", "agreement",
+          "announcements", "weekend", "productivity", "present", "absent", "restriction", "obstacles", "achievements", "opportunity",
+          "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "january", "february", "march", "april", "may",
+          "june", "july", "august", "september", "october", "november", "december", "four", "five", "six", "seven", "eight", "nine",
+          "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty",
+          "hundred", "thousand", "crore", "million", "billion", "thought", "thinking", "something", "neither", "negative", "zero",
+          "duration", "positive", "gentleman", "success", "failure", "application", "suggested", "suggestion", "expectation",
+          "implementation", "maintenance", "migration", "managed", "solution"
+        ];
+
+      } else {
+        wordList = wordListInput.split('\n').map(word => word.trim().replace(/^\d+\.\s*/, '')).filter(word => word !== '');
+      }
       getRandomWord();
     };
+
+ 
 
     window.onload = () => {
       document.getElementById('set-word-list').addEventListener('click', setWordList);
