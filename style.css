@@ -366,9 +366,11 @@ p {
 }
 
 #services .service-bottom .icon {
-	height: 80px;
-	width: 80px;
-	margin-bottom: 20px;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%; /* Make the icon round */
+    overflow: hidden; /* Ensure the content inside the icon stays within the circular shape */
 }
 
 #services .service-item h2 {
